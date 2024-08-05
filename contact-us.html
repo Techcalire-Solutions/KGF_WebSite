@@ -40,15 +40,15 @@
 					<div class="col-md-12">
 						<div class="scrapcar-top-strip-info">
 							<ul>
-								<li><a href="404.html">Why Us?</a></li>
-								<li><a href="404.html">How will I be paid?</a></li>
+								<li><a href="about-us.html">Why Us?</a></li>
+								<li><a href="#">How will I be paid?</a></li>
 								<li><a href="faq.html">FAQs</a></li>
-								<li><a href="404.html">Video</a></li>
+								<li><a href="gallery.html">Video</a></li>
 							</ul>
 						</div>
 						<div class="scrapcar-right-section">
-							<span><i class="icon icon-telephone2"></i>Call Us Free <small>(012) 345 - 6789</small></span>
-							<a href="404.html" class="scrapcar-simple-btn"><i class="automechanic-icon automechanic-people"></i>dealer login</a>
+							<span><i class="icon icon-telephone2"></i>Call Us Free <small>+91 9846335504</small></span>
+							<a href="#" class="scrapcar-simple-btn"><i class="automechanic-icon automechanic-people"></i>dealer login</a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +82,12 @@
 	<!--// Header \\-->
 
 	<!--// subheader \\-->
-	<div class="scrapcar-contact-map"><div id="map"></div></div>
+<div class="scrapcar-contact-map">
+	<div id="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7401652978156!2d76.31607307315676!3d9.955563273801609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08732061a9b405%3A0x1985deae53bc9f36!2sKGF%20Scrap%20Trading%20%26%20Recycling%20Co.!5e0!3m2!1sen!2sin!4v1722844529486!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+	</div>
+</div>
 	<!--// subheader \\-->
 
 	<!--// Main Content \\-->
@@ -131,7 +136,7 @@
 								</div>
 								<div class="col-md-9">
 									<div class="scrapcar-contact-form">
-										<!-- <form>
+										<form>
 											<ul>
 												<li>
 													<label class="title">First Name:</label>
@@ -160,77 +165,7 @@
 												</li>
 												<li><label class="submit-btn"><input type="submit" value="Send Now"> <i class="automechanic-icon automechanic-arrows22"></i></label></li>
 											</ul>
-										</form> -->
-
-										<form  id="myForm" method="post" >
-											<div class="row g-3">
-												<div class="col-12 col-sm-6">
-													<input type="text" class="form-control border-0" placeholder="Your Name" name="name" style="height: 55px;" required>
-												</div>
-												<div class="col-12 col-sm-6">
-													<input type="text" class="form-control border-0" placeholder="Your Phone Number" name="phone" style="height: 55px;" required>
-												</div>
-												<div class="col-12 col-sm-12">
-													<input type="email" class="form-control border-0" placeholder="Your Email"  name="email" style="height: 55px;">
-												</div>
-												<div class="col-12 col-sm-6">
-													<select class="form-select border-0" style="height: 55px;" name="service" required>
-														<option selected>Select A Service</option>
-														<option value="Shipbreaking">Shipbreaking</option>
-														<option value="Demolition Services">Demolition Services</option>
-														<option value="Brokerage & Trading">Brokerage & Trading</option>
-														<option value="Site Clearance services">Site Clearance services</option>
-														<option value="Automotive Recycling">Automotive Recycling</option>
-													</select>
-												</div>
-												<div class="col-12 col-sm-6">
-													<div class="date" id="date1" data-target-input="nearest">
-														<input type="text" name="date"
-															class="form-control border-0 datetimepicker-input"
-															placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
-													</div>
-												</div>
-												<div class="col-12">
-													<textarea class="form-control border-0" placeholder="Special Request" name="serive-request"></textarea>
-												</div>
-												<div class="col-12">
-													<button class="btn btn-secondary w-100 py-3" type="submit">Book Now</button>
-												</div>
-											</div>
 										</form>
-				
-				
-										<script>
-											document.getElementById('myForm').addEventListener('submit', function(event) {
-											  event.preventDefault(); // Prevent the default form submission
-										  
-											  const form = event.target;
-											  const formData = new FormData(form);
-										  
-											  const params = new URLSearchParams();
-											  formData.forEach((value, key) => {
-												params.append(key, value);
-											  });
-										  
-											  fetch('https://script.google.com/macros/s/AKfycbxRUXE8Lc1k3Nnrq1Xf8cmgVtp-cD5HV90l6Sqk_itsgB4E45tGyxFXPZZVyJ0vthUG/exec', {
-												method: 'POST',
-												body: params
-											  })
-											  .then(response => response.json())
-											  .then(data => {
-												if (data.result === 'success') {
-												  alert('Request sent successfully');
-												  form.reset();
-												} else {
-												  alert('There was a problem with the request');
-												}
-											  })
-											  .catch(error => {
-												console.error('Error:', error);
-												alert('There was a problem with the request');
-											  });
-											});
-										  </script>
 									</div>
 								</div>
 							</div>
@@ -278,7 +213,7 @@
 						<h2 class="scrapcar-footer-title">quick Links</h2>
 						<ul>
 							<li><a href="about-us.html">About Us<i class="automechanic-icon automechanic-arrow"></i></a></li>
-							<li><a href="quote.html">Instant Quote<i class="automechanic-icon automechanic-arrow"></i></a></li>
+							<li><a href="quote.html">Register Now<i class="automechanic-icon automechanic-arrow"></i></a></li>
 							<li><a href="index.html">What Clients Say<i class="automechanic-icon automechanic-arrow"></i></a></li>
 							<li><a href="service.html">Our Services<i class="automechanic-icon automechanic-arrow"></i></a></li>
 							<li><a href="faq.html">Why Choose Us?<i class="automechanic-icon automechanic-arrow"></i></a></li>
