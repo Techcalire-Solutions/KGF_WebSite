@@ -18,7 +18,8 @@
 	 <link href="css/color.css" rel="stylesheet">
 	 <link href="css/responsive.css" rel="stylesheet">
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	 
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 	</head>
 	<body>
 	 
@@ -91,74 +92,44 @@
 							<div class="scrapcar-banner-quota">
 								<h2>Get your <strong>free</strong> instant</h2>
 								<h3>online car valuation</h3>
-								<!-- <form id="submit-form"  action="">
-                     
-									<div class="row">
-									<div class="form-group col-12">
-										<input required="required" placeholder="Enter Name *" id="first-name" class="form-control" name="name" type="text">
-									</div>
-									<div class="form-group col-12">
-										<input required="required" placeholder="Enter Email *" id="email" class="form-control" name="email" type="email">
-									</div>
-									<div class="form-group col-12">
-										<input required="required" placeholder="Enter Phone No. *" id="phone" class="form-control" name="phone" type="tel">
-									</div>
-									<div class="form-group col-12">
-										<input placeholder="Enter Subject" id="subject" class="form-control" name="subject" type="text">
-									</div>
-									<div class="form-group col-lg-12">
-										<textarea required="required" placeholder="Message *" id="description" class="form-control" name="message" rows="5"></textarea>
-									</div>
-								   
-									<div class="col-lg-12">
-										<button type="submit" value="Submit"  class="btn btn-default">Submit</button>
-									</div>
-								  </form> -->
-								<!-- </div>
-								
-								</form>     -->
-
-								<form id="submit-form"  action="">
+							
+							<form id="submit-form" action="">
 									<ul>
 										<li class="number">
 											<label>Phone Number:</label>
 											<i class="fas fa-phone"></i>
-
-											<input type="text" id="phonenumber"  class="form-control" name="phonenumber" type="text">
+											<input type="text" placeholder="Type Your Phone number" id="phonenumber" class="form-control" name="phonenumber" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
+											<!-- <input type="text" id="phonenumber" class="form-control" name="phonenumber" type="text"> -->
 										</li>
 										<li class="number">
 											<label>Pincode:</label>
 											<i class="fas fa-map-marker-alt"></i>
-											<input type="text"  id="pincode" >
+											<input type="text" placeholder="Type Your Pincode" id="pincode" class="form-control" name="pincode" pattern="\d{6}" title="Please enter a 6-digit pincode" required>
 										</li>
-										
 										<li class="submit">
-									
-											<label><i class="automechanic-icon automechanic-tool"></i><input type="submit" value="Submit"  ></label>
-										<!-- <label><i class="automechanic-icon automechanic-tool"></i><input type="submit" value="Submit"  value="get My quote Now"></label>
-									 -->
+											<label><i class="automechanic-icon automechanic-tool"></i><input type="submit" value="Submit"></label>
 										</li>
 									</ul>
 								</form>
+							
 								<script>
-									$("#submit-form").submit((e)=>{
-										e.preventDefault()
+									$("#submit-form").submit((e) => {
+										e.preventDefault();
 										$.ajax({
-											url:"https://script.google.com/macros/s/AKfycbz0_P7KQZNYL1E_-zCWYspThK80z7oIB2pnM2EdV9GxZC3cxiibD5mTQ0T0x51ts8v0nw/exec",
-											data:$("#submit-form").serialize(),
-											method:"post",
-											success:function (response){
-												alert("Form submitted successfully")
-												window.location.reload()
-												//window.location.href="https://google.com"
+											url: "https://script.google.com/macros/s/AKfycbwhiENCK20z6-EpLfYaex1aNnsPkKwd4ifPw32fxr5nNvK5Mb6FWx5heRcGCRQmM_ur1g/exec",
+											data: $("#submit-form").serialize(),
+											method: "post",
+											success: function (response) {
+												alert("Form submitted successfully");
+												window.location.reload();
 											},
-											error:function (err){
-												alert("Something Error")
-								
+											error: function (err) {
+												alert("Something went wrong");
 											}
-										})
-									})
-								</script>  
+										});
+									});
+								</script> 
+						
 							</div>
 							<div class="scrapcar-banner-text">
 								<h1>Scrap & Recycle </h1>
