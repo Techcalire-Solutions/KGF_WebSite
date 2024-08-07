@@ -17,7 +17,7 @@
 	 <link href="style.css" rel="stylesheet">
 	 <link href="css/color.css" rel="stylesheet">
 	 <link href="css/responsive.css" rel="stylesheet">
-	 
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -101,8 +101,10 @@
 					<div class="col-md-12">
 						<div class="scrapcar-fancy-titlev2 left-align">
 							<h2>Why choose us</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus sollicitudin odio, eu tempor velit pellentesque et.</p>
-						</div>
+							<P>
+								We are here to assist you with all your scrap and recycling needs. Whether you have questions, need a quote, or want to schedule a pickup, please reach out to us. Our dedicated team is ready to provide prompt and professional service. Contact us today and let us help you with your recycling requirements.
+							</P>
+					</div>
 						<div class="scrapcar-contact-wrap">
 							<div class="row">
 								<div class="col-md-3">
@@ -112,8 +114,8 @@
 												<div class="scrapcar-contact-info-text">
 													<i class="automechanic-icon automechanic-technology-12"></i>
 													<h5>Call Us Now At </h5>
-													<span>(012) 345 6789</span>
-													<span>00 98 765 432</span>
+													<span> +91 9846335504</span>
+													<!-- <span>00 98 765 432</span> -->
 												</div>
 											</li>
 											<li>
@@ -128,7 +130,7 @@
 												<div class="scrapcar-contact-info-text">
 													<i class="automechanic-icon automechanic-location"></i>
 													<h5>Find Us At</h5>
-													<span>Lorem ipsum dolor sit amet, consectetur</span>
+													<span>Highway Arcade, 51/537D, NH47, Thykoodam, Vyttila, Kochi,</span>
 												</div>
 											</li>
 										</ul>
@@ -136,36 +138,60 @@
 								</div>
 								<div class="col-md-9">
 									<div class="scrapcar-contact-form">
-										<form>
+										<form id="submit-form" action="">
 											<ul>
-												<li>
-													<label class="title">First Name:</label>
-													<input type="text" value="Type Your Name" onblur="if(this.value == '') { this.value ='Type Your Name'; }" onfocus="if(this.value =='Type Your Name') { this.value = ''; }">
-													<i class="fa fa-user"></i>
-												</li>
-												<li>
-													<label class="title">Email:</label>
-													<input type="email" value="Type Your Email" onblur="if(this.value == '') { this.value ='Type Your Email'; }" onfocus="if(this.value =='Type Your Email') { this.value = ''; }">
-													<i class="fa fa-envelope"></i>
-												</li>
-												<li>
-													<label class="title">Last Name:</label>
-													<input type="text" value="Type Your Name" onblur="if(this.value == '') { this.value ='Type Your Name'; }" onfocus="if(this.value =='Type Your Name') { this.value = ''; }">
-													<i class="fa fa-user"></i>
-												</li>
-												<li>
-													<label class="title">Website:</label>
-													<input type="text" value="Type Your Website" onblur="if(this.value == '') { this.value ='Type Your Website'; }" onfocus="if(this.value =='Type Your Website') { this.value = ''; }">
-													<i class="fa fa-globe"></i>
-												</li>
-												<li class="full-width">
-													<label class="title">Message:</label>
-													<textarea placeholder="Type Your Message"></textarea>
-													<i class="fa fa-commenting"></i>
-												</li>
-												<li><label class="submit-btn"><input type="submit" value="Send Now"> <i class="automechanic-icon automechanic-arrows22"></i></label></li>
+											  <li>
+												<label class="title" for="name">First Name:</label>
+												<input type="text" placeholder="Type Your Name" id="name" class="form-control" name="name" required>
+												<i class="fa fa-user"></i>
+											  </li>
+											  <li>
+												<label class="title" for="email">Email:</label>
+												<input type="email" placeholder="Type Your Email" id="email" class="form-control" name="email" required>
+												<i class="fa fa-envelope"></i>
+											  </li>
+											  <li>
+												<label class="title" for="phonenumber">Phone Number:</label>
+                                               <input type="text" placeholder="Type Your Phone number" id="phonenumber" class="form-control" name="phonenumber" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
+                                                 <i class="fa fa-phone"></i>
+											  </li>
+											  <li>
+												<label class="title" for="website">Website:</label>
+												<input type="text" placeholder="Type Your Website" id="website" class="form-control" name="website">
+												<i class="fa fa-globe"></i>
+											  </li>
+											  <li class="full-width">
+												<label class="title" for="message">Message:</label>
+												<textarea placeholder="Type Your Message" id="message" class="form-control" name="message"></textarea>
+												<i class="fa fa-commenting"></i>
+											  </li>
+											  <li>
+												<label class="submit-btn">
+												  <input type="submit" value="Send Now"> 
+												  <i class="automechanic-icon automechanic-arrows22"></i>
+												</label>
+											  </li>
 											</ul>
-										</form>
+										  </form>
+										  
+										<script>
+											$("#submit-form").submit((e) => {
+												e.preventDefault();
+												$.ajax({
+													url: "https://script.google.com/macros/s/AKfycbx28d1eTugzaJPXL1G3oQ-ZDl9YCKrY_ITSZ1dp_rn0mQ25KcgkwIlkukQB25uU1utcGw/exec",
+													data: $("#submit-form").serialize(),
+													method: "post",
+													success: function (response) {
+														alert("Form submitted successfully");
+														window.location.reload();
+													},
+													error: function (err) {
+														alert("Something went wrong");
+													}
+												});
+											});
+										</script> 
+								
 									</div>
 								</div>
 							</div>
