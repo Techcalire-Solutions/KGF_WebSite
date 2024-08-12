@@ -112,7 +112,7 @@
 						<div class="scrapcar-gallery scrapcar-modern-gallery">
 							<ul class="row">
 								<li class="col-md-6">
-									<figure><span></span><a data-fancybox-group="group" href="extra-images/modern-gallery-img1.jpg" class="fancybox"><img src="extra-images/modern-gallery-img1.jpg" alt=""><i class="automechanic-icon automechanic-null-1"></i></a></figure>
+									<figure><span></span><a data-fancybox-group="group" href="extra-images/modern-gallery-img1.jpeg" class="fancybox"><img src="extra-images/modern-gallery-img1.jpeg" alt=""><i class="automechanic-icon automechanic-null-1"></i></a></figure>
 								</li>
 								<li class="col-md-6">
 									<figure><span></span><a data-fancybox-group="group" href="extra-images/modern-gallery-img2.jpg" class="fancybox"><img src="extra-images/modern-gallery-img2.jpg" alt=""><i class="automechanic-icon automechanic-null-1"></i></a></figure>
@@ -171,10 +171,28 @@
 				<div class="col-md-12">
 					<div class="scrapcar-newslatter-text">
 						<h2>Find a branch near you</h2>
-						<form>
-							<input type="text" value="Type your location" onblur="if(this.value == '') { this.value ='Type your location'; }" onfocus="if(this.value =='Type your location') { this.value = ''; }">
-							<label><i class="fa fa-search"></i><input type="submit" value="Find my branch"></label>
-						</form>
+				 <form onsubmit="redirectToLocationPage(event)">
+<input type="text" id="locationInput" value="Type your location"
+	onblur="if(this.value == '') { this.value ='Type your location'; }"
+	onfocus="if(this.value =='Type your location') { this.value = ''; }">
+<label>
+	<i class="fa fa-search"></i>
+	<input type="submit" value="Find my branch">
+</label>
+</form>
+
+<script>
+function redirectToLocationPage(event) {
+event.preventDefault(); // Prevent the default form submission
+const location = document.getElementById('locationInput').value;
+if (location && location !== 'Type your location') {
+	window.location.href = `location.html?search=${encodeURIComponent(location)}`;
+} else {
+	alert("Please enter a valid location.");
+}
+}
+</script>
+
 					</div>
 				</div>
 			</div>
@@ -278,7 +296,7 @@
 									<li class="firbox"><a href="https://dribbble.com/session/new"><i class="fa fa-dribbble"></i></a></li>
 								</ul>
 							</div>
-							<span>Copyright 2017. All Rights Reserved <i class="fa fa-heart"></i> by <a href="index.html">Webmarce</a></span>
+							<span>Copyright 2024. All Rights Reserved <i class="fa fa-heart"></i> by <a href="index.html">KGF</a></span>
 						</div>
 					</div>
 				</div>

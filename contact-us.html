@@ -17,7 +17,7 @@
 	 <link href="style.css" rel="stylesheet">
 	 <link href="css/color.css" rel="stylesheet">
 	 <link href="css/responsive.css" rel="stylesheet">
-	 
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,15 +40,15 @@
 					<div class="col-md-12">
 						<div class="scrapcar-top-strip-info">
 							<ul>
-								<li><a href="404.html">Why Us?</a></li>
-								<li><a href="404.html">How will I be paid?</a></li>
+								<li><a href="about-us.html">Why Us?</a></li>
+								<li><a href="#">How will I be paid?</a></li>
 								<li><a href="faq.html">FAQs</a></li>
-								<li><a href="404.html">Video</a></li>
+								<li><a href="gallery.html">Video</a></li>
 							</ul>
 						</div>
 						<div class="scrapcar-right-section">
-							<span><i class="icon icon-telephone2"></i>Call Us Free <small>(012) 345 - 6789</small></span>
-							<a href="404.html" class="scrapcar-simple-btn"><i class="automechanic-icon automechanic-people"></i>dealer login</a>
+							<span><i class="icon icon-telephone2"></i>Call Us Free <small>+91 9846335504</small></span>
+							<a href="#" class="scrapcar-simple-btn"><i class="automechanic-icon automechanic-people"></i>dealer login</a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +82,12 @@
 	<!--// Header \\-->
 
 	<!--// subheader \\-->
-	<div class="scrapcar-contact-map"><div id="map"></div></div>
+<div class="scrapcar-contact-map">
+	<div id="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7401652978156!2d76.31607307315676!3d9.955563273801609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08732061a9b405%3A0x1985deae53bc9f36!2sKGF%20Scrap%20Trading%20%26%20Recycling%20Co.!5e0!3m2!1sen!2sin!4v1722844529486!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+	</div>
+</div>
 	<!--// subheader \\-->
 
 	<!--// Main Content \\-->
@@ -96,8 +101,10 @@
 					<div class="col-md-12">
 						<div class="scrapcar-fancy-titlev2 left-align">
 							<h2>Why choose us</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus sollicitudin odio, eu tempor velit pellentesque et.</p>
-						</div>
+							<P>
+								We are here to assist you with all your scrap and recycling needs. Whether you have questions, need a quote, or want to schedule a pickup, please reach out to us. Our dedicated team is ready to provide prompt and professional service. Contact us today and let us help you with your recycling requirements.
+							</P>
+					</div>
 						<div class="scrapcar-contact-wrap">
 							<div class="row">
 								<div class="col-md-3">
@@ -107,8 +114,8 @@
 												<div class="scrapcar-contact-info-text">
 													<i class="automechanic-icon automechanic-technology-12"></i>
 													<h5>Call Us Now At </h5>
-													<span>(012) 345 6789</span>
-													<span>00 98 765 432</span>
+													<span> +91 9846335504</span>
+													<!-- <span>00 98 765 432</span> -->
 												</div>
 											</li>
 											<li>
@@ -123,7 +130,7 @@
 												<div class="scrapcar-contact-info-text">
 													<i class="automechanic-icon automechanic-location"></i>
 													<h5>Find Us At</h5>
-													<span>Lorem ipsum dolor sit amet, consectetur</span>
+													<span>Highway Arcade, 51/537D, NH47, Thykoodam, Vyttila, Kochi,</span>
 												</div>
 											</li>
 										</ul>
@@ -131,106 +138,60 @@
 								</div>
 								<div class="col-md-9">
 									<div class="scrapcar-contact-form">
-										<!-- <form>
+										<form id="submit-form" action="">
 											<ul>
-												<li>
-													<label class="title">First Name:</label>
-													<input type="text" value="Type Your Name" onblur="if(this.value == '') { this.value ='Type Your Name'; }" onfocus="if(this.value =='Type Your Name') { this.value = ''; }">
-													<i class="fa fa-user"></i>
-												</li>
-												<li>
-													<label class="title">Email:</label>
-													<input type="email" value="Type Your Email" onblur="if(this.value == '') { this.value ='Type Your Email'; }" onfocus="if(this.value =='Type Your Email') { this.value = ''; }">
-													<i class="fa fa-envelope"></i>
-												</li>
-												<li>
-													<label class="title">Last Name:</label>
-													<input type="text" value="Type Your Name" onblur="if(this.value == '') { this.value ='Type Your Name'; }" onfocus="if(this.value =='Type Your Name') { this.value = ''; }">
-													<i class="fa fa-user"></i>
-												</li>
-												<li>
-													<label class="title">Website:</label>
-													<input type="text" value="Type Your Website" onblur="if(this.value == '') { this.value ='Type Your Website'; }" onfocus="if(this.value =='Type Your Website') { this.value = ''; }">
-													<i class="fa fa-globe"></i>
-												</li>
-												<li class="full-width">
-													<label class="title">Message:</label>
-													<textarea placeholder="Type Your Message"></textarea>
-													<i class="fa fa-commenting"></i>
-												</li>
-												<li><label class="submit-btn"><input type="submit" value="Send Now"> <i class="automechanic-icon automechanic-arrows22"></i></label></li>
+											  <li>
+												<label class="title" for="name">First Name:</label>
+												<input type="text" placeholder="Type Your Name" id="name" class="form-control" name="name" required>
+												<i class="fa fa-user"></i>
+											  </li>
+											  <li>
+												<label class="title" for="email">Email:</label>
+												<input type="email" placeholder="Type Your Email" id="email" class="form-control" name="email" required>
+												<i class="fa fa-envelope"></i>
+											  </li>
+											  <li>
+												<label class="title" for="phonenumber">Phone Number:</label>
+                                               <input type="text" placeholder="Type Your Phone number" id="phonenumber" class="form-control" name="phonenumber" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
+                                                 <i class="fa fa-phone"></i>
+											  </li>
+											  <li>
+												<label class="title" for="website">Website:</label>
+												<input type="text" placeholder="Type Your Website" id="website" class="form-control" name="website">
+												<i class="fa fa-globe"></i>
+											  </li>
+											  <li class="full-width">
+												<label class="title" for="message">Message:</label>
+												<textarea placeholder="Type Your Message" id="message" class="form-control" name="message"></textarea>
+												<i class="fa fa-commenting"></i>
+											  </li>
+											  <li>
+												<label class="submit-btn">
+												  <input type="submit" value="Send Now"> 
+												  <i class="automechanic-icon automechanic-arrows22"></i>
+												</label>
+											  </li>
 											</ul>
-										</form> -->
-
-										<form  id="myForm" method="post" >
-											<div class="row g-3">
-												<div class="col-12 col-sm-6">
-													<input type="text" class="form-control border-0" placeholder="Your Name" name="name" style="height: 55px;" required>
-												</div>
-												<div class="col-12 col-sm-6">
-													<input type="text" class="form-control border-0" placeholder="Your Phone Number" name="phone" style="height: 55px;" required>
-												</div>
-												<div class="col-12 col-sm-12">
-													<input type="email" class="form-control border-0" placeholder="Your Email"  name="email" style="height: 55px;">
-												</div>
-												<div class="col-12 col-sm-6">
-													<select class="form-select border-0" style="height: 55px;" name="service" required>
-														<option selected>Select A Service</option>
-														<option value="Shipbreaking">Shipbreaking</option>
-														<option value="Demolition Services">Demolition Services</option>
-														<option value="Brokerage & Trading">Brokerage & Trading</option>
-														<option value="Site Clearance services">Site Clearance services</option>
-														<option value="Automotive Recycling">Automotive Recycling</option>
-													</select>
-												</div>
-												<div class="col-12 col-sm-6">
-													<div class="date" id="date1" data-target-input="nearest">
-														<input type="text" name="date"
-															class="form-control border-0 datetimepicker-input"
-															placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
-													</div>
-												</div>
-												<div class="col-12">
-													<textarea class="form-control border-0" placeholder="Special Request" name="serive-request"></textarea>
-												</div>
-												<div class="col-12">
-													<button class="btn btn-secondary w-100 py-3" type="submit">Book Now</button>
-												</div>
-											</div>
-										</form>
-				
-				
+										  </form>
+										  
 										<script>
-											document.getElementById('myForm').addEventListener('submit', function(event) {
-											  event.preventDefault(); // Prevent the default form submission
-										  
-											  const form = event.target;
-											  const formData = new FormData(form);
-										  
-											  const params = new URLSearchParams();
-											  formData.forEach((value, key) => {
-												params.append(key, value);
-											  });
-										  
-											  fetch('https://script.google.com/macros/s/AKfycbxRUXE8Lc1k3Nnrq1Xf8cmgVtp-cD5HV90l6Sqk_itsgB4E45tGyxFXPZZVyJ0vthUG/exec', {
-												method: 'POST',
-												body: params
-											  })
-											  .then(response => response.json())
-											  .then(data => {
-												if (data.result === 'success') {
-												  alert('Request sent successfully');
-												  form.reset();
-												} else {
-												  alert('There was a problem with the request');
-												}
-											  })
-											  .catch(error => {
-												console.error('Error:', error);
-												alert('There was a problem with the request');
-											  });
+											$("#submit-form").submit((e) => {
+												e.preventDefault();
+												$.ajax({
+													url: "https://script.google.com/macros/s/AKfycbx28d1eTugzaJPXL1G3oQ-ZDl9YCKrY_ITSZ1dp_rn0mQ25KcgkwIlkukQB25uU1utcGw/exec",
+													data: $("#submit-form").serialize(),
+													method: "post",
+													success: function (response) {
+														alert("Form submitted successfully");
+														window.location.reload();
+													},
+													error: function (err) {
+														alert("Something went wrong");
+													}
+												});
 											});
-										  </script>
+										</script> 
+								
 									</div>
 								</div>
 							</div>
@@ -278,7 +239,7 @@
 						<h2 class="scrapcar-footer-title">quick Links</h2>
 						<ul>
 							<li><a href="about-us.html">About Us<i class="automechanic-icon automechanic-arrow"></i></a></li>
-							<li><a href="quote.html">Instant Quote<i class="automechanic-icon automechanic-arrow"></i></a></li>
+							<li><a href="quote.html">Register Now<i class="automechanic-icon automechanic-arrow"></i></a></li>
 							<li><a href="index.html">What Clients Say<i class="automechanic-icon automechanic-arrow"></i></a></li>
 							<li><a href="service.html">Our Services<i class="automechanic-icon automechanic-arrow"></i></a></li>
 							<li><a href="faq.html">Why Choose Us?<i class="automechanic-icon automechanic-arrow"></i></a></li>
@@ -361,7 +322,7 @@
 									<li class="firbox"><a href="https://dribbble.com/session/new"><i class="fa fa-dribbble"></i></a></li>
 								</ul>
 							</div>
-							<span>Copyright 2017. All Rights Reserved <i class="fa fa-heart"></i> by <a href="index.html">Webmarce</a></span>
+							<span>Copyright 2024. All Rights Reserved <i class="fa fa-heart"></i> by <a href="index.html">KGF</a></span>
 						</div>
 					</div>
 				</div>
