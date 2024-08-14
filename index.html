@@ -19,6 +19,7 @@
 	 <link href="css/responsive.css" rel="stylesheet">
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	</head>
 	<style>
@@ -26,7 +27,7 @@
 	
 		.whatsapp-button i {
 			color: #25d366;
-			font-size: 60px;
+			font-size: 45px;
 		}
 	
 		.whatsapp-button:hover i {
@@ -49,7 +50,7 @@
 						<div class="scrapcar-top-strip-info">
 							<ul>
 								<li><a href="about-us.html">Why Us?</a></li>
-								<li><a href="#">How will I be paid?</a></li>
+								<li><a href="#">Our services</a></li>
 								<li><a href="faq.html">FAQs</a></li>
 								<li><a href="gallery.html">Video</a></li>
 							</ul>
@@ -130,7 +131,7 @@
 									$("#submit-form").submit((e) => {
 										e.preventDefault();
 										$.ajax({
-											url: "https://script.google.com/macros/s/AKfycbwhiENCK20z6-EpLfYaex1aNnsPkKwd4ifPw32fxr5nNvK5Mb6FWx5heRcGCRQmM_ur1g/exec",
+											url: "https://script.google.com/macros/s/AKfycbyoENOgzW81BdijYveoZY7XVefMKMm4HG3529gejdt6faF6zBGkVRf0UxlN0E6owS7ESg/exec",
 											data: $("#submit-form").serialize(),
 											method: "post",
 											success: function (response) {
@@ -489,18 +490,50 @@ function redirectToLocationPage(event) {
 
 					<!--// Widget widget_appointment \\-->
 					<aside class="col-md-3 widget widget_appointment">
-						<h2 class="scrapcar-footer-title">make an appointment</h2>
-						<form>
+						<h2 class="scrapcar-footer-title">Make an Appointment</h2>
+						<form id="submit-form" action="">
 							<ul>
-							   <li><input type="email" value="E-mail Address" onblur="if(this.value == '') { this.value ='E-mail Address'; }" onfocus="if(this.value =='E-mail Address') { this.value = ''; }"></li>
-							   <li><input type="text" value="Phone Number" onblur="if(this.value == '') { this.value ='Phone Number'; }" onfocus="if(this.value =='Phone Number') { this.value = ''; }"></li>
-							   <li><input type="text" value="Postcode" onblur="if(this.value == '') { this.value ='Postcode'; }" onfocus="if(this.value =='Postcode') { this.value = ''; }"></li>
-							   <li><label><i class="fa fa-pencil-square-o"></i></label> 
-									<input type="submit" value="make an appointment">
-							   </li>
+								<li class="number">
+									<input type="text" placeholder="Type Your Phone number" id="phonenumber" class="form-control" name="phonenumber" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
+								</li>
+								<li class="number">
+									<input type="text" placeholder="Type Your Pincode" id="pincode" class="form-control" name="pincode" pattern="\d{6}" title="Please enter a 6-digit pincode" required>
+								</li>
+								<li class="number">
+									<input type="email" placeholder="Type Your Email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required>
+								</li>
+								<li class="submit">
+									<label>
+										<i class="automechanic-icon automechanic-tool"></i>
+										<input type="submit" value="make an appointment">
+									</label>
+								</li>
 							</ul>
 						</form>
+					
+						<script>
+							$("#submit-form").submit(function(e) {
+								e.preventDefault(); // Prevent default form submission
+								
+								$.ajax({
+									url: "https://script.google.com/macros/s/AKfycbyoENOgzW81BdijYveoZY7XVefMKMm4HG3529gejdt6faF6zBGkVRf0UxlN0E6owS7ESg/exec", // Replace with your actual URL
+									data: $("#submit-form").serialize(), // Serialize form data
+									method: "POST", // Use POST method for submission
+									success: function(response) {
+										alert("Form submitted successfully");
+										window.location.reload(); // Reload the page on success
+									},
+									error: function(err) {
+										alert("Something went wrong");
+									}
+								});
+							});
+						
+
+						</script>
+							<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 					</aside>
+					
 					<!--// Widget widget_appointment \\-->
 
 					<!--// Widget widget_gallery \\-->
@@ -569,6 +602,7 @@ function redirectToLocationPage(event) {
 	
 
 	 <!-- jQuery (necessary for JavaScript plugins) -->
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	 <script type="text/javascript" src="script/jquery.js"></script>
 	 <script type="text/javascript" src="script/jquery-ui.js"></script>
 	 <script type="text/javascript" src="script/bootstrap.min.js"></script>
