@@ -50,7 +50,7 @@
 						<div class="scrapcar-top-strip-info">
 							<ul>
 								<li><a href="about-us.html">Why Us?</a></li>
-								<li><a href="#">Our services</a></li>
+								<!-- <li><a href="#">Our services</a></li> -->
 								<li><a href="faq.html">FAQs</a></li>
 								<li><a href="gallery.html">Video</a></li>
 							</ul>
@@ -458,117 +458,119 @@ function redirectToLocationPage(event) {
 
 	<!--// Footer \\-->
 	<footer id="scrapcar-footer" class="scrapcar-footer-one">
-		<!--// Footer Widget \\-->
-		<div class="scrapcar-footer-widget">
-			<div class="container">
-				<div class="row">
-
-					<!--// Widget widget_links \\-->
-					<aside class="col-md-2 widget widget_links">
-						<h2 class="scrapcar-footer-title">quick Links</h2>
-						<ul>
-							<li><a href="about-us.html">About Us<i class="automechanic-icon automechanic-arrow"></i></a></li>
-							<li><a href="quote.html">Register Now<i class="automechanic-icon automechanic-arrow"></i></a></li>
-							<li><a href="index.html">What Clients Say<i class="automechanic-icon automechanic-arrow"></i></a></li>
-							<li><a href="service.html">Our Services<i class="automechanic-icon automechanic-arrow"></i></a></li>
-							<li><a href="faq.html">Why Choose Us?<i class="automechanic-icon automechanic-arrow"></i></a></li>
-							
-						</ul>
-					</aside>
-					<!--// Widget widget_links \\-->
-
-					<!--// Widget widget_links \\-->
-					<aside class="col-md-3 widget widget_links social-links">
-						<h2 class="scrapcar-footer-title">we’re social</h2>
-						<ul>
-							<li><a href="https://www.facebook.com/">Facebook<i class="fa fa-facebook-square"></i></a></li>
-							<li><a href="https://twitter.com/login">Twitter<i class="fa fa-twitter-square"></i></a></li>
-							<li><a href="https://plus.google.com/discover">Google Plus<i class="automechanic-icon automechanic-social-1"></i></a></li>
-							<li><a href="https://www.youtube.com/signin">Youtube<i class="automechanic-icon automechanic-play"></i></a></li>
-						</ul>
-					</aside>
-					<!--// Widget widget_links \\-->
-
-					<!--// Widget widget_appointment \\-->
-					<aside class="col-md-3 widget widget_appointment">
-						<h2 class="scrapcar-footer-title">Make an Appointment</h2>
-						<form id="submit-form" action="">
+			<!--// Footer Widget \\-->
+			<div class="scrapcar-footer-widget">
+				<div class="container">
+					<div class="row">
+	
+						<!--// Widget widget_links \\-->
+						<aside class="col-md-2 widget widget_links">
+							<h2 class="scrapcar-footer-title">quick Links</h2>
 							<ul>
-								<li class="number">
-									<input type="text" placeholder="Type Your Phone number" id="phonenumber" class="form-control" name="phonenumber" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
-								</li>
-								<li class="number">
-									<input type="text" placeholder="Type Your Pincode" id="pincode" class="form-control" name="pincode" pattern="\d{6}" title="Please enter a 6-digit pincode" required>
-								</li>
-								<li class="number">
-									<input type="email" placeholder="Type Your Email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required>
-								</li>
-								<li class="submit">
-									<label>
-										<i class="automechanic-icon automechanic-tool"></i>
-										<input type="submit" value="make an appointment">
-									</label>
-								</li>
-							</ul>
-						</form>
-					
-						<script>
-							$("#submit-form").submit(function(e) {
-								e.preventDefault(); // Prevent default form submission
+								<li><a href="about-us.html">About Us<i class="automechanic-icon automechanic-arrow"></i></a></li>
+								<li><a href="quote.html">Register Now<i class="automechanic-icon automechanic-arrow"></i></a></li>
+								<li><a href="index.html">What Clients Say<i class="automechanic-icon automechanic-arrow"></i></a></li>
+								<li><a href="service.html">Our Services<i class="automechanic-icon automechanic-arrow"></i></a></li>
+								<li><a href="faq.html">Why Choose Us?<i class="automechanic-icon automechanic-arrow"></i></a></li>
 								
-								$.ajax({
-									url: "https://script.google.com/macros/s/AKfycbyoENOgzW81BdijYveoZY7XVefMKMm4HG3529gejdt6faF6zBGkVRf0UxlN0E6owS7ESg/exec", // Replace with your actual URL
-									data: $("#submit-form").serialize(), // Serialize form data
-									method: "POST", // Use POST method for submission
-									success: function(response) {
-										alert("Form submitted successfully");
-										window.location.reload(); // Reload the page on success
-									},
-									error: function(err) {
-										alert("Something went wrong");
-									}
-								});
-							});
+							</ul>
+						</aside>
+						<!--// Widget widget_links \\-->
+	
+						<!--// Widget widget_links \\-->
+						<aside class="col-md-3 widget widget_links social-links">
+							<h2 class="scrapcar-footer-title">we’re social</h2>
+							<ul>
+								<li><a href="https://www.facebook.com/profile.php?id=61559347306357">Facebook<i class="fa fa-facebook-square"></i></a></li>
+								<li><a href="https://www.instagram.com/kgf_scrap_recycling_co/">Instagram<i class="fa fa-instagram"></i></a></li>
+								<!-- <li><a href="https://plus.google.com/discover">Google Plus<i class="automechanic-icon automechanic-social-1"></i></a></li> -->
+								<li><a href="https://m.youtube.com/@Kgfrecycling">Youtube<i class="automechanic-icon automechanic-play"></i></a></li>
+							</ul>
+						</aside>
+								
+						<!--// Widget widget_links \\-->
+	
+						<!--// Widget widget_appointment \\-->
+						<aside class="col-md-3 widget widget_appointment">
+							<h2 class="scrapcar-footer-title">Make an Appointment</h2>
+							<form id="submit-form" action="">
+								<ul>
+									<li class="number">
+										<input type="text" placeholder="Type Your Phone number" id="phonenumber" class="form-control" name="phonenumber" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
+									</li>
+									<li class="number">
+										<input type="text" placeholder="Type Your Pincode" id="pincode" class="form-control" name="pincode" pattern="\d{6}" title="Please enter a 6-digit pincode" required>
+									</li>
+									<li class="number">
+										<input type="email" placeholder="Type Your Email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required>
+									</li>
+									<li class="submit">
+										<label>
+											<i class="automechanic-icon automechanic-tool"></i>
+											<input type="submit" value="make an appointment">
+										</label>
+									</li>
+								</ul>
+							</form>
 						
-
-						</script>
-							<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-					</aside>
-					
-					<!--// Widget widget_appointment \\-->
-
-					<!--// Widget widget_gallery \\-->
+							<script>
+								$("#submit-form").submit(function(e) {
+									e.preventDefault(); // Prevent default form submission
+									
+									$.ajax({
+										url: "https://script.google.com/macros/s/AKfycbyoENOgzW81BdijYveoZY7XVefMKMm4HG3529gejdt6faF6zBGkVRf0UxlN0E6owS7ESg/exec", // Replace with your actual URL
+										data: $("#submit-form").serialize(), // Serialize form data
+										method: "POST", // Use POST method for submission
+										success: function(response) {
+											alert("Form submitted successfully");
+											window.location.reload(); // Reload the page on success
+										},
+										error: function(err) {
+											alert("Something went wrong");
+										}
+									});
+								});
+							
+	
+							</script>
+								<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+						</aside>
+						
+						<!--// Widget widget_appointment \\-->
+	
+						<!--// Widget widget_gallery \\-->
 					<aside class="col-md-4 widget widget_gallery">
 						<h2 class="scrapcar-footer-title">WE HANDLE:</h2>
 						<ul>
 							<li>
-								<figure><a data-fancybox-group="group" href="extra-images/widget-gallery-img1.png" class="fancybox"><img src="extra-images/widget-gallery-img1.png" alt=""></a></figure>
+								<img src="extra-images/widget-gallery-img1.png" alt="">
 							</li>
 							
 							<li>
-								<figure><a data-fancybox-group="group" href="extra-images/widget-gallery-img2.png" class="fancybox"><img src="extra-images/widget-gallery-img2.png" alt=""></a></figure>
+								
+								<img src="extra-images/widget-gallery-img2.png" alt="">
 							</li>
 							
 							<li>
-								<figure><a data-fancybox-group="group" href="extra-images/widget-gallery-img3.png" class="fancybox"><img src="extra-images/widget-gallery-img3.png" alt=""></a></figure>
+								<img src="extra-images/widget-gallery-img3.png" alt="">
 							</li>
 							<li>
-								<figure><a data-fancybox-group="group" href="extra-images/widget-gallery-img4.png" class="fancybox"><img src="extra-images/widget-gallery-img4.png" alt=""></a></figure>
+								<img src="extra-images/widget-gallery-img4.png" alt="">
 							</li>
 							<li>
-								<figure><a data-fancybox-group="group" href="extra-images/widget-gallery-img5.png" class="fancybox"><img src="extra-images/widget-gallery-img5.png" alt=""></a></figure>
+								<img src="extra-images/widget-gallery-img5.png" alt="">
 							</li>
 							<li>
-								<figure><a data-fancybox-group="group" href="extra-images/widget-gallery-img6.png" class="fancybox"><img src="extra-images/widget-gallery-img6.png" alt=""></a></figure>
+								<img src="extra-images/widget-gallery-img6.png" alt="">
 							</li>
 						</ul>
 					</aside>
-					<!--// Widget widget_gallery \\-->
-
+						<!--// Widget widget_gallery \\-->
+	
+					</div>
 				</div>
 			</div>
-		</div>
-		<!--// Footer Widget \\-->
+			<!--// Footer Widget \\-->
 
 		<!--// CopyRight \\-->
 		<div class="scrapcar-copyright-wrap">
