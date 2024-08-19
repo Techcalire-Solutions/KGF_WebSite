@@ -458,144 +458,106 @@ function redirectToLocationPage(event) {
 
 	<!--// Footer \\-->
 	<footer id="scrapcar-footer" class="scrapcar-footer-one">
-			<!--// Footer Widget \\-->
-			<div class="scrapcar-footer-widget">
-				<div class="container">
-					<div class="row">
-	
-						<!--// Widget widget_links \\-->
-						<aside class="col-md-2 widget widget_links">
-							<h2 class="scrapcar-footer-title">quick Links</h2>
-							<ul>
-								<li><a href="about-us.html">About Us<i class="automechanic-icon automechanic-arrow"></i></a></li>
-								<li><a href="quote.html">Register Now<i class="automechanic-icon automechanic-arrow"></i></a></li>
-								<li><a href="index.html">What Clients Say<i class="automechanic-icon automechanic-arrow"></i></a></li>
-								<li><a href="service.html">Our Services<i class="automechanic-icon automechanic-arrow"></i></a></li>
-								<li><a href="faq.html">Why Choose Us?<i class="automechanic-icon automechanic-arrow"></i></a></li>
-								
-							</ul>
-						</aside>
-						<!--// Widget widget_links \\-->
-	
-						<!--// Widget widget_links \\-->
-						<aside class="col-md-3 widget widget_links social-links">
-							<h2 class="scrapcar-footer-title">we’re social</h2>
-							<ul>
-								<li><a href="https://www.facebook.com/profile.php?id=61559347306357">Facebook<i class="fa fa-facebook-square"></i></a></li>
-								<li><a href="https://www.instagram.com/kgf_scrap_recycling_co/">Instagram<i class="fa fa-instagram"></i></a></li>
-								<!-- <li><a href="https://plus.google.com/discover">Google Plus<i class="automechanic-icon automechanic-social-1"></i></a></li> -->
-								<li><a href="https://m.youtube.com/@Kgfrecycling">Youtube<i class="automechanic-icon automechanic-play"></i></a></li>
-							</ul>
-						</aside>
-								
-						<!--// Widget widget_links \\-->
-	
-						<!--// Widget widget_appointment \\-->
-						<aside class="col-md-3 widget widget_appointment">
-							<h2 class="scrapcar-footer-title">Make an Appointment</h2>
-							<form id="submit-form" action="">
-								<ul>
-									<li class="number">
-										<input type="text" placeholder="Type Your Phone number" id="phonenumber" class="form-control" name="phonenumber" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
-									</li>
-									<li class="number">
-										<input type="text" placeholder="Type Your Pincode" id="pincode" class="form-control" name="pincode" pattern="\d{6}" title="Please enter a 6-digit pincode" required>
-									</li>
-									<li class="number">
-										<input type="email" placeholder="Type Your Email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required>
-									</li>
-									<li class="submit">
-										<label>
-											<i class="automechanic-icon automechanic-tool"></i>
-											<input type="submit" value="make an appointment">
-										</label>
-									</li>
-								</ul>
-							</form>
-						
-							<script>
-								$("#submit-form").submit(function(e) {
-									e.preventDefault(); // Prevent default form submission
-									
-									$.ajax({
-										url: "https://script.google.com/macros/s/AKfycbyoENOgzW81BdijYveoZY7XVefMKMm4HG3529gejdt6faF6zBGkVRf0UxlN0E6owS7ESg/exec", // Replace with your actual URL
-										data: $("#submit-form").serialize(), // Serialize form data
-										method: "POST", // Use POST method for submission
-										success: function(response) {
-											alert("Form submitted successfully");
-											window.location.reload(); // Reload the page on success
-										},
-										error: function(err) {
-											alert("Something went wrong");
-										}
-									});
-								});
+		<!--// Footer Widget \\-->
+		<div class="scrapcar-footer-widget">
+			<div class="container">
+				<div class="row">
+
+					<!--// Widget widget_links \\-->
+					<aside class="col-md-2 widget widget_links">
+						<h2 class="scrapcar-footer-title">quick Links</h2>
+						<ul>
+							<li><a href="about-us.html">About Us<i class="automechanic-icon automechanic-arrow"></i></a></li>
+							<li><a href="quote.html">Register Now<i class="automechanic-icon automechanic-arrow"></i></a></li>
+							<li><a href="faq.html">FAQ<i class="automechanic-icon automechanic-arrow"></i></a></li>
+							<li><a href="contact-us.html">Contact Us<i class="automechanic-icon automechanic-arrow"></i></a></li>
+							<!-- <li><a href="products.html">Our Products<i class="automechanic-icon automechanic-arrow"></i></a></li> -->
 							
-	
-							</script>
-								<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-						</aside>
-						
-						<!--// Widget widget_appointment \\-->
-	
-						<!--// Widget widget_gallery \\-->
-					<aside class="col-md-4 widget widget_gallery">
-						<h2 class="scrapcar-footer-title">WE HANDLE:</h2>
+						</ul>
+					</aside>
+					<!--// Widget widget_links \\-->
+
+					<!--// Widget widget_links \\-->
+					<aside class="col-md-3 widget widget_links social-links">
+						<h2 class="scrapcar-footer-title">we’re social</h2>
+						<ul>
+							<li><a href="https://www.facebook.com/share/ovSydeE4rJ7M7dB3/?mibextid=qi2Omg">Facebook<i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="https://www.instagram.com/kgf_scrap_recycling_co/">Instagram<i class="fa fa-instagram"></i></a></li>
+							<!-- <li><a href="https://plus.google.com/discover">Google Plus<i class="automechanic-icon automechanic-social-1"></i></a></li> -->
+							<li><a href="https://m.youtube.com/@Kgfrecycling">Youtube<i class="automechanic-icon automechanic-play"></i></a></li>
+						</ul>
+					</aside>
+					<!--// Widget widget_links \\-->
+
+					<!--// Widget widget_appointment \\-->
+					<aside class="col-md-3 widget widget_gallery">
+						<h2 class="scrapcar-footer-title">MAJOR CERTIFICATIONS</h2>
 						<ul>
 							<li>
-								<img src="extra-images/widget-gallery-img1.png" alt="">
+								<img src="extra-images/certificate1.jpg" alt="">
 							</li>
 							
 							<li>
 								
-								<img src="extra-images/widget-gallery-img2.png" alt="">
-							</li>
+								<img src="extra-images/certificate2.jpg" alt="">
+							</li> 
 							
-							<li>
+							<!-- <li>
 								<img src="extra-images/widget-gallery-img3.png" alt="">
 							</li>
 							<li>
 								<img src="extra-images/widget-gallery-img4.png" alt="">
-							</li>
+							</li>-->
+							<!-- <li>
+								<img src="extra-images/certificate3.jpg" alt="">
+							</li> -->
 							<li>
-								<img src="extra-images/widget-gallery-img5.png" alt="">
-							</li>
-							<li>
-								<img src="extra-images/widget-gallery-img6.png" alt="">
-							</li>
+								<img src="extra-images/certificate4.jpg" alt="">
+							</li> 
 						</ul>
 					</aside>
-						<!--// Widget widget_gallery \\-->
-	
-					</div>
+					
+					<!--// Widget widget_appointment \\-->
+
+					<!--// Widget widget_gallery \\-->
+					<aside class="col-md-4">
+						<h2 class="scrapcar-footer-title">MAJOR CLIENTS</h2>
+						<ul>
+							<img src="extra-images/CLIENTS.jpg" style="width: 1000px;" alt="">
+						</ul>
+					</aside>
+					<!--// Widget widget_gallery \\-->
+
 				</div>
 			</div>
-			<!--// Footer Widget \\-->
 
-		<!--// CopyRight \\-->
-		<div class="scrapcar-copyright-wrap">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="scrapcar-copyright">
-							<div class="copyright-social-icon">
-								<ul>	
-									<li class="facebook"><a href="https://www.facebook.com/profile.php?id=61559347306357"><i class="fa-brands fa-facebook-f"></i></i></a></li>
-									<li class="twitter"><a ><i class="fa-brands fa-twitter"></i></a></li>
-									<li class="linkedin"><a ><i class="fa-brands fa-linkedin-in"></i></a></li>
-									<li class="plus"><a ><i class="fa-brands fa-google-plus-g"></i></a></li>
-									<li class="firbox"><a href="https://www.instagram.com/kgf_scrap_recycling_co?igsh=dXpxM3h2OWh2NHRq"><i class="fa-brands fa-instagram"></i></a></li>
-								</ul>
-							</div>
-							<span>Copyright 2024. All Rights Reserved <i class="fa fa-heart"></i> by <a href="index.html">KGF</a></span>
+		</div>
+		<!--// Footer Widget \\-->
+
+	<!--// CopyRight \\-->
+	<div class="scrapcar-copyright-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="scrapcar-copyright">
+						<div class="copyright-social-icon">
+							<ul>	
+								<li class="facebook"><a href="https://www.facebook.com/share/ovSydeE4rJ7M7dB3/?mibextid=qi2Omg"><i class="fa fa-facebook"></i></a></li>
+								<li class="firbox"><a href="https://www.instagram.com/kgf_scrap_recycling_co/"><i class="fa fa-instagram"></i></a></li>
+								<!-- <li class="linkedin"><a href="https://pk.linkedin.com/"><i class="fa fa-linkedin"></i></a></li> -->
+								<li class="plus"><a href="https://m.youtube.com/@Kgfrecycling"><i class="fa fa-youtube-play"></i></a></li>
+								<!-- <li class="firbox"><a href="https://dribbble.com/session/new"><i class="fa fa-dribbble"></i></a></li> -->
+							</ul>
 						</div>
+						<span>Copyright 2024. All Rights Reserved <i class="fa fa-heart"></i> by <a href="index.html">KGF</a></span>
 					</div>
 				</div>
 			</div>
-		</div>		
-		<!--// CopyRight \\-->
+		</div>
+	</div>		
+	<!--// CopyRight \\-->
 
-	</footer>
+</footer>
 	<!--// Footer \\-->
 
 	<div class="clearfix"></div>
